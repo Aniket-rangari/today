@@ -18,8 +18,8 @@ public class ControllerLayer {
 	private ServiceLayer sl;
 	
 	@PostMapping("/students")
-	public Student addStudent(@RequestBody Student s) {
-		return sl.addStudent(s);		
+	public void addStudent(@RequestBody Student s) {
+		sl.addStudent(s);		
 	}
 	
 	@GetMapping("/students/{id}")
